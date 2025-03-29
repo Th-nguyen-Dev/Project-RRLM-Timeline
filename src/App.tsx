@@ -8,7 +8,7 @@ import {
 } from "@/components/ui/card"
 import { Carousel, CarouselApi, CarouselContent, CarouselItem } from './components/ui/carousel'
 import { ScrollArea } from './components/ui/scroll-area'
-import React, { useCallback, useEffect, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 
 function App() {
 
