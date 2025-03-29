@@ -2,15 +2,13 @@ import './App.css'
 import {
   Card,
   CardContent,
-  CardAction,
   CardDescription,
-  CardFooter,
   CardHeader,
   CardTitle
 } from "@/components/ui/card"
-import { Carousel, CarouselApi, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from './components/ui/carousel'
+import { Carousel, CarouselApi, CarouselContent, CarouselItem } from './components/ui/carousel'
 import { ScrollArea } from './components/ui/scroll-area'
-import React, { useCallback, useEffect, useRef, useState } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 
 function App() {
 
