@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "tsx ./fetch_commits.ts && vite",
-    "build": "tsc -b && vite build",
+    "build": "tsx ./fetch_commits.ts && tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview"
   },
