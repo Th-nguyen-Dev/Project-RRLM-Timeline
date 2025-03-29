@@ -78,7 +78,7 @@ interface GitHubCommit {
   }[];
 }
 
-function Milestone({content, auth_token}: {content: MilestoneProps, auth_token: string}) {
+function Milestone({content}: {content: MilestoneProps}) {
   // Fixed the CarouselApi state declaration with proper type
   const [carouselApi, setCarouselApi] = useState<CarouselApi | null>(null);
   const [carouselCurrentIndex, setCarouselCurrentIndex] = useState(0);
@@ -88,15 +88,21 @@ function Milestone({content, auth_token}: {content: MilestoneProps, auth_token: 
   useEffect(() => {
     async function fetchCommits() {
 
-    const cachedDataUrl = `${import.meta.env.BASE_URL}data/${content.owner}-${content.repo}-${content.branch}.json`;
-    const response = await fetch(cachedDataUrl);
-    if (response.ok) {
-      const data = await response.json();
-      setCommits(data);
+    try {
+      const cachedDataUrl = `${import.meta.env.BASE_URL}data/${content.owner}-${content.repo}-${content.branch}.json`;
+      const response = await fetch(cachedDataUrl);
+      if (response.ok) {
+        const data = await response.json();
+        setCommits(data);
+      } else {
+        console.error(`Failed to fetch commits: ${response.status} ${response.statusText}`);
+      }
+    } catch (error) {
+      console.error("Error fetching commits:", error);
     }
   }
   fetchCommits();
-  },[content, auth_token]);
+  },[content]);
 
   // Set up an effect to create a timer that scrolls to the next carousel item
   useEffect(() => {

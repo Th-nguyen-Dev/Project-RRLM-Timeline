@@ -4,8 +4,6 @@ import { MilestoneProps } from '@/milestone'
 import milestoneData from './content.json'
 
 function App() {
-    const [auth_token] = useState(import.meta.env.VITE_GITHUB_TOKEN)
-    
     return (
         <div className="min-h-screen relative">
             {/* Repeating background div */}
@@ -24,7 +22,6 @@ function App() {
                     <Milestone
                         key={index}
                         content={milestone as MilestoneProps}
-                        auth_token={auth_token}
                     />
                 ))}
             </div>
