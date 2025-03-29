@@ -87,23 +87,15 @@ function Milestone({content, auth_token}: {content: MilestoneProps, auth_token: 
 
   useEffect(() => {
     async function fetchCommits() {
-      const { owner, repo, branch } = content;
-      try {
-        const response = await fetch(`https://api.github.com/repos/${owner}/${repo}/commits?sha=${branch}`, {
-          method: 'GET',
-          headers: {
-            'Authorization': `Bearer ${auth_token}`,
-            'Accept': 'application/vnd.github.v3+json'
-          }
-        });
-        const data = await response.json();
-        setCommits(data as GitHubCommit[]);
-        console.log(data);
-      } catch (error) {
-        console.error("Error fetching commits:", error);
-      }
+
+    const cachedDataUrl = `${import.meta.env.BASE_URL}data/${content.owner}-${content.repo}-${content.branch}.json`;
+    const response = await fetch(cachedDataUrl);
+    if (response.ok) {
+      const data = await response.json();
+      setCommits(data);
     }
-    fetchCommits();
+  }
+  fetchCommits();
   },[content, auth_token]);
 
   // Set up an effect to create a timer that scrolls to the next carousel item

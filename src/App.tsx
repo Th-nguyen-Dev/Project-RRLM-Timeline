@@ -1,6 +1,6 @@
-import Milestone from "@/Milestone"
+import Milestone from "@/milestone"
 import { useState } from 'react'
-import { MilestoneProps } from '@/Milestone'
+import { MilestoneProps } from '@/milestone'
 import milestoneData from './content.json'
 
 function App() {
