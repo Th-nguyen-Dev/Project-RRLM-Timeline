@@ -4,104 +4,30 @@
       "repo": "RRLM-Frontend",
       "branch": "Ryan-Dev",
       
-      "tittle": "User Dashboard Development",
-      "subtittle": "Created responsive dashboard with key metrics",
+      "tittle": "RRLM-Frontend",
+      "subtittle": "Frontend Repo for the website",
       
-      "description": "Designed and implemented a comprehensive user dashboard that displays important metrics and information. Used React with TypeScript for component development, incorporated data visualization libraries for charts and graphs, and ensured the interface is responsive across all device sizes. Implemented real-time data updates using React Query.",
-      
-      "imageDescription": [
-        "Dashboard main view with metrics overview",
-        "Responsive layout implementation",
-        "Data fetching and state management code"
-      ],
-      "imageLink": [
-        "https://github.com/Bellevue-College-ProfWentao/RRLM-Frontend/blob/feature/dashboard/src/pages/Dashboard.tsx",
-        "https://github.com/Bellevue-College-ProfWentao/RRLM-Frontend/blob/feature/dashboard/src/components/dashboard/MetricsCard.tsx",
-        "https://github.com/Bellevue-College-ProfWentao/RRLM-Frontend/blob/feature/dashboard/src/hooks/useMetricsData.ts"
-      ]
-    },
-    {
-      "owner": "Bellevue-College-ProfWentao",
-      "repo": "PlaceholderTeam-Prototype",
-      "branch": "main",
-      
-      "tittle": "Chatbot UI Implementation",
-      "subtittle": "Developed interactive chat interface with real-time responses",
-      
-      "description": "Created a modern, user-friendly chat interface for the prototype chatbot application. Implemented message threading, typing indicators, and response animations. Designed the UI to be accessible and responsive across all device types. Used TypeScript and React for frontend implementation with Go backend integration for processing user queries.",
-      
-      "imageDescription": [
-        "Chat interface with message bubbles",
-        "Real-time typing indicator implementation",
-        "Backend API integration code"
-      ],
-      "imageLink": [
-        "https://github.com/Bellevue-College-ProfWentao/PlaceholderTeam-Prototype/blob/main/frontend/src/components/ChatInterface.tsx",
-        "https://github.com/Bellevue-College-ProfWentao/PlaceholderTeam-Prototype/blob/main/frontend/src/components/TypingIndicator.tsx",
-        "https://github.com/Bellevue-College-ProfWentao/PlaceholderTeam-Prototype/blob/main/frontend/src/services/chatService.ts"
-      ]
+      "description": ""
     },
     {
       "owner": "Bellevue-College-ProfWentao",
       "repo": "PlaceholderTeam-Prototype",
       "branch": "Ryan-Dev-Intergration",
       
-      "tittle": "Natural Language Processing Integration",
-      "subtittle": "Connected frontend with Go-based NLP backend",
+      "tittle": "PlaceholderTeam-Prototype",
+      "subtittle": "Prototype for the chatbot application, frontend and backend",
       
-      "description": "Integrated the frontend chat application with the Go-based Natural Language Processing backend. Implemented a service layer for API communication, set up proper error handling and retry mechanisms, and created a seamless user experience by managing loading states. Enhanced the response display with proper formatting for different content types returned by the NLP engine.",
-      
-      "imageDescription": [
-        "NLP integration architecture diagram",
-        "Service layer implementation for API calls",
-        "Enhanced response rendering components"
-      ],
-      "imageLink": [
-        "https://github.com/Bellevue-College-ProfWentao/PlaceholderTeam-Prototype/blob/feature/nlp-integration/docs/architecture.md",
-        "https://github.com/Bellevue-College-ProfWentao/PlaceholderTeam-Prototype/blob/feature/nlp-integration/frontend/src/services/nlpService.ts",
-        "https://github.com/Bellevue-College-ProfWentao/PlaceholderTeam-Prototype/blob/feature/nlp-integration/frontend/src/components/ResponseFormatter.tsx"
-      ]
+      "description": ""
     },
+
     {
       "owner": "Bellevue-College-ProfWentao",
       "repo": "2024-2025-senior-capstone-project-placeholder-team",
       "branch": "Ryan-Dev",
       
-      "tittle": "Project Documentation and Planning",
-      "subtittle": "Created comprehensive technical documentation and project roadmap",
+      "tittle": "2024-2025-senior-capstone-project-placeholder-team",
+      "subtittle": "Intermidiate backend Repo for project RRLM",
       
-      "description": "Led the documentation effort for the senior capstone project, creating detailed technical specifications, architecture diagrams, and implementation guidelines. Established a clear project roadmap with milestones, deadlines, and team member responsibilities. Set up project management tools and workflows to track progress efficiently.",
-      
-      "imageDescription": [
-        "System architecture diagram",
-        "Project roadmap with milestones",
-        "Technical specification document"
-      ],
-      "imageLink": [
-        "https://github.com/Bellevue-College-ProfWentao/2024-2025-senior-capstone-project-placeholder-team/blob/main/docs/architecture.md",
-        "https://github.com/Bellevue-College-ProfWentao/2024-2025-senior-capstone-project-placeholder-team/blob/main/docs/roadmap.md",
-        "https://github.com/Bellevue-College-ProfWentao/2024-2025-senior-capstone-project-placeholder-team/blob/main/docs/technical-spec.md"
-      ]
-    },
-    {
-      "owner": "Bellevue-College-ProfWentao",
-      "repo": "2024-2025-senior-capstone-project-placeholder-team",
-      "branch": "Ryan-Dev",
-      
-      "tittle": "Requirements Analysis and User Stories",
-      "subtittle": "Conducted stakeholder interviews and developed user stories",
-      
-      "description": "Performed comprehensive requirements gathering through stakeholder interviews and market research. Translated business requirements into detailed user stories with acceptance criteria. Created user journey maps and wireframes to illustrate the proposed solution. Prioritized features based on business value and implementation complexity.",
-      
-      "imageDescription": [
-        "User stories document with acceptance criteria",
-        "User journey map for main workflows",
-        "Feature prioritization matrix"
-      ],
-      "imageLink": [
-        "https://github.com/Bellevue-College-ProfWentao/2024-2025-senior-capstone-project-placeholder-team/blob/feature/requirements-analysis/docs/user-stories.md",
-        "https://github.com/Bellevue-College-ProfWentao/2024-2025-senior-capstone-project-placeholder-team/blob/feature/requirements-analysis/docs/journey-maps.md",
-        "https://github.com/Bellevue-College-ProfWentao/2024-2025-senior-capstone-project-placeholder-team/blob/feature/requirements-analysis/docs/feature-prioritization.md"
-      ]
+      "description": ""
     }
 ]
