@@ -6,7 +6,7 @@ import {
   CardHeader,
   CardTitle
 } from "@/components/ui/card"
-import { CarouselApi, CarouselItem } from './components/ui/carousel'
+// import { CarouselApi, CarouselItem } from './components/ui/carousel'
 import { Bar, BarChart, CartesianGrid, XAxis, YAxis } from "recharts"
 import { ScrollArea } from './components/ui/scroll-area'
 import { useCallback, useEffect, useState } from 'react';
@@ -79,7 +79,7 @@ interface GitHubCommit {
 
 function Milestone({content}: {content: MilestoneProps}) {
   // Fixed the CarouselApi state declaration with proper type
-  const [carouselApi, setCarouselApi] = useState<CarouselApi | null>(null);
+  // const [carouselApi, setCarouselApi] = useState<CarouselApi | null>(null);
   // const [carouselCurrentIndex, setCarouselCurrentIndex] = useState(0);
   // const [carouselItems, setCarouselItems] = useState(0);
   const [commits, setCommits] = useState<GitHubCommit[]>([]);
@@ -112,7 +112,7 @@ function Milestone({content}: {content: MilestoneProps}) {
       const response = await fetch(cachedDataUrl);
       if (response.ok) {
         const data = await response.json();
-        const transformedData = data[0].weeks.map((week: any) => ({
+        const transformedData = data[0].weeks.map((week: { w: number; a: number; d: number }) => ({
           w: new Date(week.w * 1000).toLocaleDateString(),
           additions: week.a,
           deletions: week.d,
