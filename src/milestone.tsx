@@ -20,7 +20,7 @@ export interface MilestoneProps {
   tittle: string;
   subtittle: string;
 
-  description: string;
+  description: string[];
 }
 
 interface GitHubCommitAuthor {
@@ -197,11 +197,11 @@ function Milestone({content}: {content: MilestoneProps}) {
   const chartConfig = {
     additions: {
       label: "Additions",
-      color: "var(--chart-1)",
+      color: "var(--chart-2)",
     },
     deletions: {
       label: "Deletions",
-      color: "var(--chart-2)",
+      color: "var(--chart-1)",
     },
   } 
 
@@ -246,10 +246,17 @@ function Milestone({content}: {content: MilestoneProps}) {
             </div>
           </CardHeader>
           <CardContent className='flex flex-row h-[28rem] w-full space-x-3'>
-            <div className='w-2/5 h-h-full text-left'>
-              <p>{content.description}</p>
+            <div className='w-1/4 h-h-full text-left'>
+              <div className="space-y-2">
+                  {content.description.map((item, index) => (
+                    <div key={index} className="flex items-start mb-2">
+                      <span className="mr-2 text-gray-500">•</span>
+                      <p>{item}</p>
+                    </div>
+                  ))}
+              </div>
             </div>
-            <div className='w-2/5 h-full flex flex-col space-y-2'>
+            <div className='w-2/4 h-full flex flex-col space-y-2'>
               <p className='flex justify-start text-md font-bold text-left'>My Contribution Graph</p>
               <div className='h-full w-full flex-grow'>
               <ChartContainer config={chartConfig} className='h-full w-full'>
@@ -270,13 +277,13 @@ function Milestone({content}: {content: MilestoneProps}) {
                     cursor={false}
                     content={<ChartTooltipContent indicator="dashed" />}
                   />
-                    <Bar dataKey="additions" fill="var(--chart-1)" radius={4} />
-                    <Bar dataKey="deletions" fill="var(--chart-2)" radius={4} />
+                    <Bar dataKey="additions" fill="var(--chart-2)" radius={4} />
+                    <Bar dataKey="deletions" fill="var(--chart-1)" radius={4} />
                 </BarChart>
               </ChartContainer>
               </div>
             </div>
-            <div className='w-1/5 h-full flex flex-col space-y-2'>
+            <div className='w-1/4 h-full flex flex-col space-y-2'>
               <p className='flex justify-start text-md font-bold text-left'>{content.branch}</p>
               <div className='flex-grow h-full pb-10'>
                 <ScrollArea className='h-full'>

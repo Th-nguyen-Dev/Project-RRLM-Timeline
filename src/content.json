@@ -1,33 +1,49 @@
 [
-    {
-      "owner": "Bellevue-College-ProfWentao",
-      "repo": "RRLM-Frontend",
-      "branch": "Ryan-Dev",
-      
-      "tittle": "RRLM-Frontend",
-      "subtittle": "Frontend repository for the website",
-      
-      "description": ""
-    },
-    {
-      "owner": "Bellevue-College-ProfWentao",
-      "repo": "PlaceholderTeam-Prototype",
-      "branch": "Ryan-Dev-Intergration",
-      
-      "tittle": "PlaceholderTeam-Prototype",
-      "subtittle": "Prototype for the chatbot application",
-      
-      "description": ""
-    },
-
-    {
-      "owner": "Bellevue-College-ProfWentao",
-      "repo": "2024-2025-senior-capstone-project-placeholder-team",
-      "branch": "Ryan-Dev",
-      
-      "tittle": "2024-2025-senior-capstone-project-placeholder-team",
-      "subtittle": "Intermidiate backend repository for project RRLM",
-      
-      "description": ""
-    }
+  {
+    "owner": "Bellevue-College-ProfWentao",
+    "repo": "RRLM-Frontend",
+    "branch": "Ryan-Dev",
+    
+    "tittle": "RRLM-Frontend",
+    "subtittle": "Frontend repository for the website",
+    
+    "description": [
+    "Developed a frontend framework with CI/CD for the frontend engineer team",
+    "Implemented ready-to-use interactive chat feature ported from the prototype",
+    "Created abstraction layer for RESTFUL API communication with the backend",
+    "Built CI/CD pipeline using GitHub Actions for deployment to AWS S3"
+    ]
+  },
+  {
+    "owner": "Bellevue-College-ProfWentao",
+    "repo": "PlaceholderTeam-Prototype",
+    "branch": "Ryan-Dev-Intergration",
+    
+    "tittle": "PlaceholderTeam-Prototype",
+    "subtittle": "Prototype for the chatbot application",
+    
+    "description": [
+    "Developed a prototype website with chatbot functionality in a simple Python HTTP server",
+    "Upgraded to a full-fledged Go web server for serving the website",
+    "Implemented communication handling between frontend, database, and chatbot",
+    "Built backend capable of handling multiple users, conversations, and user data management",
+    "Created documentation for the prototype and its API interface",
+    "Pair programmed with frontend teamates to explain the inner working of the backend, and how to use its API"
+    ]
+  },
+  {
+    "owner": "Bellevue-College-ProfWentao",
+    "repo": "2024-2025-senior-capstone-project-placeholder-team",
+    "branch": "Ryan-Dev",
+    
+    "tittle": "2024-2025-senior-capstone-project-placeholder-team",
+    "subtittle": "Intermidiate backend repository for project RRLM",
+    
+    "description": [
+    "Ported prototype backend to official codebase with revised API interface",
+    "Enhanced database interaction with proper transaction handling",
+    "Implemented more robust chatbot with proper memory management",
+    "Planning to split monolith codebase into microservices for AWS Lambda deployment"
+    ]
+  }
 ]
