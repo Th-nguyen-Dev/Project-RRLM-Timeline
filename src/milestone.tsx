@@ -112,7 +112,9 @@ function Milestone({content}: {content: MilestoneProps}) {
       const response = await fetch(cachedDataUrl);
       if (response.ok) {
         const data = await response.json();
-        const transformedData = data[0].weeks.map((week: { w: number; a: number; d: number }) => ({
+        const trimmedData = data[0].weeks.filter((week: { w: number; a: number; d: number }) => week.a > 0 || week.d > 0);
+        console.log(trimmedData);
+        const transformedData = trimmedData.map((week: { w: number; a: number; d: number }) => ({
           w: new Date(week.w * 1000).toLocaleDateString(),
           additions: week.a,
           deletions: week.d,
@@ -243,37 +245,47 @@ function Milestone({content}: {content: MilestoneProps}) {
               <CardDescription className='text-xl'>{content.subtittle}</CardDescription>
             </div>
           </CardHeader>
-          <CardContent className='flex flex-row h-80 w-full space-x-3'>
-            <div className='w-1/4 h-h-full text-left'>
+          <CardContent className='flex flex-row h-[28rem] w-full space-x-3'>
+            <div className='w-2/5 h-h-full text-left'>
               <p>{content.description}</p>
             </div>
-            <ChartContainer config={chartConfig} className='w-2/4 h-full'>
-              <BarChart accessibilityLayer data={chartData}>
-                <CartesianGrid vertical={false} />
-                <XAxis
-                  dataKey="w"
-                  tickLine={false}
-                  tickMargin={10}
-                  axisLine={false}
-                />
-                <YAxis
-                  tickLine={false}
-                  tickMargin={10}
-                  axisLine={false}
-                ></YAxis>
-                <ChartTooltip
-                  cursor={false}
-                  content={<ChartTooltipContent indicator="dashed" />}
-                />
-                  <Bar dataKey="additions" fill="var(--chart-1)" radius={4} />
-                  <Bar dataKey="deletions" fill="var(--chart-2)" radius={4} />
-              </BarChart>
-            </ChartContainer>
-            <ScrollArea className='h-full w-1/4 px-2'> 
-                <div className='w-full pr-2'>
-                  {commitsDisplay()}
+            <div className='w-2/5 h-full flex flex-col space-y-2'>
+              <p className='flex justify-start text-md font-bold text-left'>My Contribution Graph</p>
+              <div className='h-full w-full flex-grow'>
+              <ChartContainer config={chartConfig} className='h-full w-full'>
+                <BarChart accessibilityLayer data={chartData}>
+                  <CartesianGrid vertical={false} />
+                  <XAxis
+                    dataKey="w"
+                    tickLine={false}
+                    tickMargin={10}
+                    axisLine={false}
+                  />
+                  <YAxis
+                    tickLine={false}
+                    tickMargin={10}
+                    axisLine={false}
+                  ></YAxis>
+                  <ChartTooltip
+                    cursor={false}
+                    content={<ChartTooltipContent indicator="dashed" />}
+                  />
+                    <Bar dataKey="additions" fill="var(--chart-1)" radius={4} />
+                    <Bar dataKey="deletions" fill="var(--chart-2)" radius={4} />
+                </BarChart>
+              </ChartContainer>
+              </div>
+            </div>
+            <div className='w-1/5 h-full flex flex-col space-y-2'>
+              <p className='flex justify-start text-md font-bold text-left'>{content.branch}</p>
+              <div className='flex-grow h-full pb-10'>
+                <ScrollArea className='h-full'>
+                    <div className='w-full'>
+                      {commitsDisplay()}
+                    </div>
+                </ScrollArea>
                 </div>
-            </ScrollArea>
+            </div>
           </CardContent>
         </Card>
       </div>
